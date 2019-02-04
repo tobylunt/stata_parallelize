@@ -56,7 +56,7 @@ prog def gnu_parallel_example
 end
 /* *********** END program gnu_parallel_example ******************************* */
 
-/* NOTE: the above "end program ..." line is CRUCIAL if you have your
+/* NOTE: the above "end program ..." line is crucial if you have your
 parallelizing code in your same do-file. this is how the gnu_parallel
 program extracts your program and reads it in batch mode. */
 
@@ -73,8 +73,8 @@ your input happens to be. */
 /* initialize a text file that will have our state names saved in it, one per line. */
 file open arguments_file using "$tmp/parallel_args.txt", write replace
 
-/* set the list of states */
-global statelist 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35
+/* set abritrary list of states */
+global statelist 01 02 03 04 08 09 13 14 15 16 23 24 28 30 31 32 35
 
 /* loop over the states, and write each name to a new line */
 foreach state in $statelist {
